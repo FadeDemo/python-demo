@@ -24,7 +24,7 @@ print(clean_words)
 users = [
     {"name": "Alice", "age": 28, "role": "admin"},
     {"name": "Bob", "age": 22, "role": "user"},
-    {"name": "Charlie", "age": 35, "role": "admin"}
+    {"name": "Charlie", "age": 35, "role": "admin"},
 ]
 
 # 提取所有管理员的名字

@@ -15,13 +15,12 @@ print(word_lengths)
 prices_usd = {"book": 15, "keyboard": 80, "mouse": 25, "monitor": 300}
 
 # 只保留价格大于 50 的，并乘以 7.2 转换为 CNY
-prices_cny = {item: price * 7.2 for item,
-              price in prices_usd.items() if price > 50}
+prices_cny = {item: price * 7.2 for item, price in prices_usd.items() if price > 50}
 
 # 输出: {'keyboard': 576.0, 'monitor': 2160.0}
 print(prices_cny)
 user_ids = [101, 102, 103]
 user_names = ["Alice", "Bob", "Charlie"]
 
-user_dict = {user_id: name for user_id, name in zip(user_ids, user_names)}
+user_dict = {user_id: name for user_id, name in zip(user_ids, user_names, strict=True)}
 # 输出: {101: 'Alice', 102: 'Bob', 103: 'Charlie'}

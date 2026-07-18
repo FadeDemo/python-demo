@@ -9,6 +9,7 @@ class BaseLLM:
         print(f"[{self.model_name}] 正在计算 '{text}' 的 Token 数量...")
         return len(text)
 
+
 # 定义一个子类，继承自 BaseLLM
 
 
@@ -24,8 +25,7 @@ class OpenAILLM(BaseLLM):
 
 
 # 实例化子类
-my_gpt = OpenAILLM(model_name="gpt-4", api_key="sk-xxx",
-                   organization_id="org-123")
+my_gpt = OpenAILLM(model_name="gpt-4", api_key="sk-xxx", organization_id="org-123")
 
 # 子类可以直接使用父类的方法
 token_count = my_gpt.count_tokens("你好，世界")
@@ -47,12 +47,14 @@ class LocalLLM(BaseLLM):
         print(f"从本地路径 {self.model_path} 加载模型并推理...")
         return "这是来自本地 LLaMA 模型的回复"
 
+
 # 【多态的核心体现】：一个接收任何模型的通用函数
 
 
 def run_ai_task(model, prompt):
     print("--- 任务开始 ---")
-    # 不管传入的是 OpenAILLM 还是 LocalLLM，只要它们都有 generate_response 方法，就能正常运行
+    # 不管传入的是 OpenAILLM 还是 LocalLLM，
+    # 只要它们都有 generate_response 方法，就能正常运行。
     result = model.generate_response(prompt)
     print(f"最终结果: {result}")
     print("--- 任务结束 ---\n")

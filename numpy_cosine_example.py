@@ -24,4 +24,4 @@ fruit2 = np.array([0.7, 0.2, 0.1])
 car = np.array([0.1, 0.9, 0.8])
 
 print(f"苹果与橘子的相似度: {cosine_similarity(fruit1, fruit2):.4f}")  # 结果接近 1
-print(f"苹果与汽车的相似度: {cosine_similarity(fruit1, car):.4f}")    # 结果远小于 1
+print(f"苹果与汽车的相似度: {cosine_similarity(fruit1, car):.4f}")  # 结果远小于 1
