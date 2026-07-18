@@ -997,6 +997,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "numpy" },
     { name = "pandas" },
+    { name = "scikit-learn" },
     { name = "sentence-transformers" },
 ]
 
@@ -1009,6 +1010,7 @@ dev = [
 requires-dist = [
     { name = "numpy", specifier = ">=2.5.1" },
     { name = "pandas", specifier = ">=3.0.3" },
+    { name = "scikit-learn", specifier = ">=1.9.0" },
     { name = "sentence-transformers", specifier = ">=5.6.0" },
 ]
 
